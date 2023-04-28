@@ -1,0 +1,194 @@
+.wrapper {
+  height: 100vh;
+  background-color: var(--gray-600);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--gray-600);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-700);
+  height: 10rem;
+}
+
+.header h1{
+  margin-left: 0.875rem;
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 40px;
+}
+
+.header span{
+  color: var(--purple-dark);
+}
+
+.inputTaskName {
+  margin-right: 0.6rem;
+  padding: 1rem;
+}
+
+.newTask {
+  display: flex;
+  margin-top: -1.8rem;
+  justify-content: center;
+}
+
+.newTask > input {
+  height: 3.375rem;
+  width: 39rem;
+  background-color: var(--gray-500);
+  color: var(--gray-300);
+  border-radius: 8px;
+  border-color: transparent;
+}
+
+.newTask > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.375rem;
+  width: 5.625rem;
+  border-radius: 8px;
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  border-color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.newTask > button > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.3rem;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+  background-color: var(--gray-500);
+  width: 42rem;
+  margin: 0.2rem;
+  color: var(--gray-100);
+  border-radius: 8px;
+}
+
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lixeira {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.lixeira span {
+  display: block;
+  margin-top: -1.5rem;
+  margin-left: 2rem;
+  margin-right: 0.875rem;
+}
+
+.checkbox{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid var(--blue);
+  outline: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: var(--purple-dark);
+  background-image: url('./../src/assets/Vector.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.count {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.count span {
+  margin-left: 0.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0 8px;
+  color: var(--gray-100);
+  background-color: var(--gray-400);
+}
+
+.countTasks {
+  display: flex;
+}
+.countCompletedTasks {
+  display: flex;
+}
+
+.countCompletedTasks > p {
+  color: var(--purple);
+}
+
+.trash {
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.trash:hover {
+  color: var(--danger);
+  background-color: var(--gray-400);
+}
+
+li label input[type="checkbox"]:checked ~ * { 
+  color:var(--gray-300)
+}
+
+.tasksNone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  color: var(--gray-300);
+  font-weight: 700;
+}
+.tasksNone > p {
+  margin-top: 1rem;
+}
+.tasksNone > span {
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .newTask > input {
+    width: 15rem;
+  }
+
+  li {
+    width: 18rem;
+  }
+}
