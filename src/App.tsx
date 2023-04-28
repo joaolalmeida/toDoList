@@ -59,10 +59,16 @@ export function App() {
             className={styles.newTask}
             onSubmit={(e) => {
               e.preventDefault()
-              const taskName = (e.target as HTMLFormElement).elements.taskName
-                .value
-              addTask(taskName)
-              e.target.reset()
+              const form = e.target as HTMLFormElement
+              const taskNameElement = form.elements.namedItem("taskName")
+              const taskName =
+                taskNameElement instanceof HTMLInputElement
+                  ? taskNameElement.value
+                  : undefined
+              if (taskName !== undefined) {
+                addTask(taskName)
+                form.reset()
+              }
             }}
           >
             <input
@@ -90,7 +96,7 @@ export function App() {
           </div>
           {tasks.length === 0 ? (
             <div className={styles.tasksNone}>
-              <TbClipboardText size={70}/>
+              <TbClipboardText size={70} />
               <p>Você ainda não tem tarefas cadastradas.</p>
               <span>Crie tarefas e organize seus itens a fazer</span>
             </div>
