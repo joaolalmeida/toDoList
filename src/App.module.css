@@ -61,6 +61,12 @@
   border-color: transparent;
   font-size: 14px;
   font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.newTask > button:hover {
+  background-color: var(--blue);
 }
 
 .newTask > button > span {
