@@ -1,4 +1,4 @@
-# toDoList
+# ToDoList
 
 Desafio do curso da Rockeset para criar uma To-Do List
 
